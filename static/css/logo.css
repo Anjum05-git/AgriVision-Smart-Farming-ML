@@ -1,0 +1,96 @@
+/* Smart Agri Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+    color: #f8f9fa !important;
+}
+
+/* Ensure logo text is white in navbar */
+.navbar .logo-text {
+    color: white !important;
+}
+
+.navbar .logo-text:hover {
+    color: #f8f9fa !important;
+}
+
+.logo-tagline {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 400;
+    margin-top: -5px;
+}
+
+/* Animated Logo */
+.logo-animated .logo-icon {
+    animation: logoPulse 2s infinite;
+}
+
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Logo for different sizes */
+.logo-sm .logo-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.logo-sm .logo-text {
+    font-size: 1.2rem;
+}
+
+.logo-lg .logo-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+
+.logo-lg .logo-text {
+    font-size: 2rem;
+}
+
+/* Dark theme logo */
+.logo-dark .logo-text {
+    color: white;
+}
+
+.logo-dark .logo-tagline {
+    color: #adb5bd;
+} 

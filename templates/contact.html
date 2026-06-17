@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSmart - Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.freepik.com/free-photo/green-tea-bud-leaves-green-tea-plantations-morning_335224-955.jpg?semt=ais_hybrid&w=740');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .contact-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .btn-custom {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+            color: white;
+        }
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+        }
+        .contact-info {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/home">
+                                    <i class="fas fa-seedling me-2"></i>AgriSmart
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Crop Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signin">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm ms-2" href="/signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">Contact Us</h1>
+            <p class="lead mb-4">Get in touch with our team for support, partnerships, or any questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5 contact-info">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
+                    <h5>Our Office</h5>
+                    <p>Malla Reddy Engineering College For Women<br>Maisamaguda, Kompally, Hyderabad<br>Telangana, India</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-phone fa-3x mb-3"></i>
+                    <h5>Phone</h5>
+                    <p>+91 9494553995<br>+91 8008760826<br>+91 8247657762<br>+91 7893003688</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-envelope fa-3x mb-3"></i>
+                    <h5>Email</h5>
+                    <p>info@agrismart.com<br>support@agrismart.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="card contact-card">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-4">Send us a Message</h3>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-custom">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="col-lg-4">
+                    <div class="card contact-card mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Business Hours</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
+                                <li class="mb-2"><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
+                                <li class="mb-2"><strong>Sunday:</strong> Closed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card contact-card mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Follow Us</h5>
+                            <div class="d-flex flex-column gap-2">
+                                <a href="#" class="btn btn-outline-success">
+                                    <i class="fab fa-facebook me-2"></i>Facebook
+                                </a>
+                                <a href="#" class="btn btn-outline-success">
+                                    <i class="fab fa-twitter me-2"></i>Twitter
+                                </a>
+                                <a href="#" class="btn btn-outline-success">
+                                    <i class="fab fa-linkedin me-2"></i>LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-success">
+                                    <i class="fab fa-instagram me-2"></i>Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card contact-card">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="/about" class="text-decoration-none text-success">About Us</a></li>
+                                <li class="mb-2"><a href="/" class="text-decoration-none text-success">Crop Prediction</a></li>
+                                <li class="mb-2"><a href="/signup" class="text-decoration-none text-success">Sign Up</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-success">Privacy Policy</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-success">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-success">Find Us</h3>
+                <p class="text-muted">Visit our office or get directions</p>
+            </div>
+            <div class="card contact-card">
+                <div class="card-body p-0">
+                    <div class="ratio ratio-21x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.073857964839!2d78.4866713151267!3d17.5863966878997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb85e2e2e2e2e2%3A0x7e2e2e2e2e2e2e2e!2sMalla%20Reddy%20Engineering%20College%20for%20Women!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Malla Reddy Engineering College For Women, Maisamaguda, Kompally, Hyderabad"></iframe>
+                    </div>
+                    <div class="card-body p-3">
+                        <h6 class="mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i>Malla Reddy Engineering College For Women</h6>
+                        <p class="mb-1 text-muted">Maisamaguda, Kompally, Hyderabad</p>
+                        <p class="mb-0 text-muted">Telangana, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-seedling me-2"></i>AgriSmart</h5>
+                    <p class="text-muted">Revolutionizing agriculture with artificial intelligence and data science.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted">&copy; 2024 AgriSmart. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your backend
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset the form
+            this.reset();
+        });
+    </script>
+</body>
+</html> 
